@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Gia's Portfolio</title>
-        <meta name="description" content="Gia's portfolio" />
+        <title>코딩하지아</title>
+        <meta name="description" content="코딩하지아" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="flex min-h-screen flex-col items-center justify-center text-gray-600 body-font">
