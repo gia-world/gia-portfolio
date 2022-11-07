@@ -11,7 +11,9 @@
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.6.0",
     "@types/react-lottie": "^1.2.6",
+    "dotenv": "^16.0.3",
     "next": "13.0.0",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lottie-player": "^1.5.0"
