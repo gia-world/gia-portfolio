@@ -66,13 +66,13 @@ const Projects = ({ notionData }: Props) => {
           <meta name="description" content="코딩하지아" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <h1 className="text-4xl font-bold sm:text-6xl">
+        <h2 className="text-4xl font-bold">
           총 프로젝트 :
           <span className="pl-4 text-blue-500">
             {notionData.results.length}
           </span>
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 py-10 gap-8 w-full">
+        </h2>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 py-10 gap-8 w-full">
           {notionData.results.map((it: any) => (
             <ProjectItem key={it.id} data={it} />
           ))}
@@ -118,7 +118,7 @@ export async function getStaticProps() {
     (it: Result) => it.properties.Name.title[0].plain_text
   );
 
-  console.log(`(서버사이드)projectNames:${projectNames}`);
+  // console.log(`(서버사이드)projectNames:${projectNames}`);
 
   return {
     props: { notionData }, // will be passed to the page component as props
