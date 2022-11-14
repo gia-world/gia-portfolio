@@ -6,13 +6,6 @@ interface Props {
   data: Result;
 }
 
-interface Img extends React.ImgHTMLAttributes<HTMLImageElement> {
-  width: string;
-  height: string;
-  layout: string;
-  objectFit: string;
-}
-
 const ProjectItem = ({ data }: Props) => {
   const title = data.properties.Name.title[0].plain_text;
   const githubLink = data.properties.Github.url;
@@ -38,28 +31,27 @@ const ProjectItem = ({ data }: Props) => {
       Number(endDateStringArray[2])
     );
 
-    console.log(`startDate: ${startDate}`);
-    console.log(`endDate: ${endDate}`);
+    // console.log(`startDate: ${startDate}`);
+    // console.log(`endDate: ${endDate}`);
 
     const diffInMs = Math.abs(Number(endDate) - Number(startDate));
     const result = diffInMs / (1000 * 60 * 60 * 24);
 
-    console.log(`기간 : ${result}`);
+    // console.log(`기간 : ${result}`);
     return result;
   };
 
   return (
     <div className="project-card">
       <Image
-        className="rounded-t-xl w-full"
+        className="rounded-t-xl w-[100%] h-[50%]"
         src={imgSrc}
-        alt={title}
+        alt="cover image"
         width="100"
-        height="60"
-        // layout="responsive"
-        // objectFit="cover"
-        quality={100}
+        height="100"
+        // fill={true}
       />
+
       <div className="p-4 flex flex-col">
         <h2 className="text-2xl font-bold">{title}</h2>
         <h3 className="mt-4 text-xl">{desc}</h3>

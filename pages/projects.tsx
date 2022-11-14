@@ -72,7 +72,7 @@ const Projects = ({ notionData }: Props) => {
             {notionData.results.length}
           </span>
         </h2>
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 py-10 gap-8 w-full">
+        <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 py-10 lg:px-40 gap-8 w-full">
           {notionData.results.map((it: any) => (
             <ProjectItem key={it.id} data={it} />
           ))}
@@ -114,9 +114,9 @@ export async function getStaticProps() {
 
   // console.log(notionData);
 
-  const projectNames = notionData.results.map(
-    (it: Result) => it.properties.Name.title[0].plain_text
-  );
+  // const projectNames = notionData.results.map(
+  //   (it: Result) => it.properties.Name.title[0].plain_text
+  // );
 
   // console.log(`(서버사이드)projectNames:${projectNames}`);
 

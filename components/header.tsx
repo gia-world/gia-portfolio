@@ -5,7 +5,7 @@ import DarkModeToggleButton from "./dark-mode-toggle-btn";
 const Header = () => {
   return (
     <>
-      <header className="text-gray-600 body-font">
+      <header className="text-gray-600 body-font md:px-24">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link
             href="/"
@@ -35,10 +35,7 @@ const Header = () => {
             <Link href="/projects" className="mr-5 hover:text-gray-900">
               프로젝트
             </Link>
-            <Link
-              href="https://open.kakao.com/o/sO1rdrEe"
-              className="mr-5 hover:text-gray-900"
-            >
+            <Link href="/about-me" className="mr-5 hover:text-gray-900">
               연락하기
             </Link>
           </nav>
