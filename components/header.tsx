@@ -1,15 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import DarkModeToggleButton from "./dark-mode-toggle-btn";
+import DarkModeToggleButton from "./DarkModeToggleButton";
 
 const Header = () => {
   return (
     <>
       <header className="text-gray-600 body-font md:px-24">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center gap-4 md:gap-8">
           <Link
             href="/"
-            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+            className="flex title-font font-medium items-center text-gray-900"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,18 +25,15 @@ const Header = () => {
             </svg>
             <span className="ml-3 text-xl">코딩하지아</span>
           </Link>
-          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <Link href="/" className="mr-5 hover:text-gray-900">
+          <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5 md:gap-8">
+            <Link href="/" className="hover:text-gray-900">
               홈
             </Link>
-            {/* <Link href="/">
-              <a className="mr-5 hover:text-gray-900">홈2</a>
-            </Link> */}
-            <Link href="/projects" className="mr-5 hover:text-gray-900">
-              프로젝트
+            <Link href="/about-me" className="hover:text-gray-900">
+              소개
             </Link>
-            <Link href="/about-me" className="mr-5 hover:text-gray-900">
-              연락하기
+            <Link href="/projects" className="hover:text-gray-900">
+              프로젝트
             </Link>
           </nav>
           <DarkModeToggleButton />

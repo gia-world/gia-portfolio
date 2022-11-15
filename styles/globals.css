@@ -6,29 +6,25 @@
 
 @font-face {
   font-family: "S-CoreDream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "S-CoreDream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "S-CoreDream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "S-CoreDream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -46,13 +42,12 @@ html {
 }
 
 .project-card {
-  @apply flex flex-col rounded-xl w-full
+  @apply flex flex-col rounded-xl w-full overflow-hidden
             transition duration-100 transform border border-gray-300
-            /* hover:scale-105 */
             hover:translate-y-[-0.5rem]
             hover:shadow-lg
             dark:border-gray-200/50
-            dark:hover:shadow-gray-400/40
+            dark:hover:shadow-slate-700
 
             hover:text-blue-600;
 }

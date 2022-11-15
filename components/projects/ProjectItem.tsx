@@ -15,21 +15,14 @@ const ProjectItem = ({ data }: Props) => {
   const tags = data.properties.Tags.multi_select;
   const start = data.properties.WorkPeriod.date.start;
   const end = data.properties.WorkPeriod.date.end;
+  const pageLink=data.url;
 
   const calculatedPeriod = (start: string, end: string) => {
     const startDateStringArray = start.split("-");
     const endDateStringArray = end.split("-");
 
-    var startDate = new Date(
-      Number(startDateStringArray[0]),
-      Number(startDateStringArray[1]),
-      Number(startDateStringArray[2])
-    );
-    var endDate = new Date(
-      Number(endDateStringArray[0]),
-      Number(endDateStringArray[1]),
-      Number(endDateStringArray[2])
-    );
+    var startDate = new Date(Number(startDateStringArray[0]), Number(startDateStringArray[1]), Number(startDateStringArray[2]));
+    var endDate = new Date(Number(endDateStringArray[0]), Number(endDateStringArray[1]), Number(endDateStringArray[2]));
 
     // console.log(`startDate: ${startDate}`);
     // console.log(`endDate: ${endDate}`);
@@ -43,18 +36,18 @@ const ProjectItem = ({ data }: Props) => {
 
   return (
     <div className="project-card">
+      <a href={pageLink} target="_blank" title="사진을 클릭하면 프로젝트 페이지로 이동합니다.">
+      <div className="relative w-[100%] pt-[56.25%]">
       <Image
-        className="rounded-t-xl w-[100%] h-[50%]"
+        className="object-cover"
         src={imgSrc}
-        alt="cover image"
-        width="100"
-        height="100"
-        // fill={true}
+        alt={title}
+        fill={true}
       />
-
+      </div></a>
       <div className="p-4 flex flex-col">
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <h3 className="mt-4 text-xl">{desc}</h3>
+      <a href={pageLink} target="_blank"><h3 className="text-2xl font-bold">{title}</h3></a>
+        <h4 className="my-4 text-xl">{desc}</h4>
         <a href={githubLink}>깃허브 바로가기</a>
         <a href={deployLink}>배포 페이지 바로가기</a>
         <p className="my-1">
@@ -62,12 +55,9 @@ const ProjectItem = ({ data }: Props) => {
         </p>
         <div className="flex items-start mt-2">
           {tags.map((it) => (
-            <h4
-              className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
-              key={it.id}
-            >
+            <p className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30 text-sm text-slate-900 dark:text-white" key={it.id}>
               {it.name}
-            </h4>
+            </p>
           ))}
         </div>
       </div>

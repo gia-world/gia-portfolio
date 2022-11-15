@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
-import Layout from "../components/layout";
-import ProjectItem from "../components/projects/project-item";
+import Layout from "../components/Layout";
+import ProjectItem from "../components/projects/ProjectItem";
 import { TOKEN, DATABASE_ID } from "../config";
 
 interface Props {
@@ -55,17 +55,16 @@ export interface Result {
       };
     };
   };
+  url:string;
 }
 const Projects = ({ notionData }: Props) => {
   // console.log(`(클라이언트사이드) ${projectNames}`);
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-6">
-        <Head>
-          <title>코딩하지아</title>
-          <meta name="description" content="코딩하지아" />
-          <link rel="icon" href="/favicon.ico" />
+      <Head>
+          <title>코딩하지아 - 프로젝트</title>
         </Head>
+      <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-10 px-6">
         <h2 className="text-4xl font-bold">
           총 프로젝트 :
           <span className="pl-4 text-blue-500">
