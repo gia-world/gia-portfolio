@@ -11,6 +11,7 @@ const AboutMe = () => {
         <title>코딩하지아 - 소개</title>
       </Head>
       <div>
+        <h2 className="hidden">자기소개</h2>
         <Intro/>
         <Skills/>
       </div>

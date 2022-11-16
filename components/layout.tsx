@@ -10,7 +10,7 @@ const layout = ({ children }: Props) => {
   return (
     <div className="bg-primary">
       <Header />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
     </div>
   );

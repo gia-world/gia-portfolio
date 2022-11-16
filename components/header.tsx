@@ -23,7 +23,7 @@ const Header = () => {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-3 text-xl">코딩하지아</span>
+            <h1 className="ml-3 text-xl">코딩하지아</h1>
           </Link>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5 md:gap-8">
             <Link href="/" className="hover:text-gray-900">
