@@ -13,9 +13,10 @@ const MainItem = () => {
           A Front-end Developer
         </h3>
         <div className="flex justify-center">
-          <Link href="/projects" className="btn-project">
+          {/* <Link href="/projects" className="btn-project">
             프로젝트 보러가기
-          </Link>
+          </Link> */}
+          <a href="https://www.notion.so/Gia-Jihye-Jun-the-UI-developer-31cceb5eb0a348258000598f05fc1bd7" target="_blank" className="btn-project">이력서 확인하기</a>
         </div>
       </div>
       <div className="lg:w-full md:w-1/2 w-5/6">
