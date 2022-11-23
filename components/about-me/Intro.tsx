@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <section className="w-full bg-violet-50">
+    <section className="w-full bg-violet-50 dark:bg-slate-600">
       <div className="container flex flex-col items-center justify-center px-10 py-16 md:py-20 lg:flex-row bg-grey-50 mx-auto">
         <div className="w-full text-center sm:w-3/4 lg:w-2/5 lg:text-left">
           <h3 className="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Who am I?</h3>
@@ -23,7 +23,7 @@ const Intro = () => {
             <div className="flex items-center justify-center sm:justify-start gap-2">
               {/* insta */}
               <a href="#">
-                <svg className="text-violet-900" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
                     fill-rule="evenodd"
@@ -34,7 +34,7 @@ const Intro = () => {
               </a>
               {/* youtube */}
               <a href="#">
-                <svg className="text-violet-900" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
                   <g fill="none" stroke="currentColor" stroke-linejoin="round">
                     <path
                       stroke-width="4"
@@ -46,7 +46,7 @@ const Intro = () => {
               </a>
               {/* blog */}
               <a href="#">
-                <svg className="text-violet-900" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                   <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                     <path d="M8 21h8a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-1V8a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5z" />
                     <rect width="6" height="3" x="7" y="7" rx="1.5" />
@@ -56,7 +56,7 @@ const Intro = () => {
               </a>
               {/* github */}
               <a href="#">
-                <svg className="text-violet-900" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1"/></svg>
+                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1"/></svg>
               </a>
             </div>
           </div>
@@ -64,8 +64,8 @@ const Intro = () => {
         <ul className="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
           <li>
             <div className="flex items-end justify-between">
-              <p className="font-body font-semibold uppercase text-black">HTML &amp; CSS</p>
-              <p className="font-body text-2xl font-bold text-primary">95%</p>
+              <h4 className="font-body font-semibold uppercase text-black">HTML &amp; CSS</h4>
+              <h3 className="font-body text-3xl font-bold text-primary">95%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
               <div className="h-3 rounded-full bg-primary" style={{ width: "95%" }}></div>
