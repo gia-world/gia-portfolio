@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import DarkModeToggleButton from "./DarkModeToggleButton";
+import LanguageToggleButton from "./LanguageToggleButton";
 
 const Header = () => {
   return (
@@ -37,6 +38,7 @@ const Header = () => {
             </Link>
           </nav>
           <DarkModeToggleButton />
+          <LanguageToggleButton/>
         </div>
       </header>
     </>
