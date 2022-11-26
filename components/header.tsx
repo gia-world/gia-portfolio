@@ -38,7 +38,7 @@ const Header = () => {
             </Link>
           </nav>
           <DarkModeToggleButton />
-          <LanguageToggleButton/>
+          <LanguageToggleButton />
         </div>
       </header>
     </>

@@ -3,10 +3,13 @@ import MainItem from "../components/home/MainItem";
 import Layout from "../components/Layout";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { GetStaticPropsContext } from "next";
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const { t } = useTranslation("common");
+  const router = useRouter();
+  const { locale } = router;
 
   return (
     <Layout>
@@ -15,9 +18,10 @@ export default function Home() {
       </Head>
       <div className="flex min-h-[70vh] md:min-h-[80vh] flex-col items-center justify-center text-gray-600 body-font">
         <h2>{t("tit")}</h2>
-        {/* <h2 className="hidden">메인페이지</h2> */}
+        <h2 className="hidden">메인페이지</h2>
         <div className="container mx-auto flex md:flex-row flex-col items-center">
           <h3>{t("hi")}</h3>
+          <h4>{locale}</h4>
           <MainItem />
         </div>
       </div>
@@ -25,11 +29,16 @@ export default function Home() {
   );
 }
 
-export const getStaticProps = async ({ locale ='en' }:any) => {
-  console.log("locale of getStaticProps", locale);
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-};
+// export async function getStaticProps({ locale }: GetStaticProps ) {
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(locale as string, ["common", "about"])),
+//       // Will be passed to the page component as props
+//     },
+//   };
+// }
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["common", "about"])),
+  },
+});
