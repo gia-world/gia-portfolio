@@ -21,8 +21,16 @@ const ProjectItem = ({ data }: Props) => {
     const startDateStringArray = start.split("-");
     const endDateStringArray = end.split("-");
 
-    var startDate = new Date(Number(startDateStringArray[0]), Number(startDateStringArray[1]), Number(startDateStringArray[2]));
-    var endDate = new Date(Number(endDateStringArray[0]), Number(endDateStringArray[1]), Number(endDateStringArray[2]));
+    var startDate = new Date(
+      Number(startDateStringArray[0]),
+      Number(startDateStringArray[1]),
+      Number(startDateStringArray[2])
+    );
+    var endDate = new Date(
+      Number(endDateStringArray[0]),
+      Number(endDateStringArray[1]),
+      Number(endDateStringArray[2])
+    );
 
     // console.log(`startDate: ${startDate}`);
     // console.log(`endDate: ${endDate}`);
@@ -35,25 +43,48 @@ const ProjectItem = ({ data }: Props) => {
   };
 
   return (
-    <div className="project-card" title="사진을 클릭하면 프로젝트 페이지로 이동합니다.">
-      <a href={pageLink} target="_blank">
+    <div
+      className="project-card"
+      title="사진을 클릭하면 프로젝트 페이지로 이동합니다."
+    >
+      <a href={pageLink} target="_blank" rel="noreferrer">
         <div className="relative w-[100%] pt-[56.25%]">
-          <Image className="object-cover" src={imgSrc} alt={title} fill={true} />
+          <Image
+            className="object-cover"
+            src={imgSrc}
+            alt={title}
+            fill={true}
+          />
         </div>
       </a>
       <div className="p-4 flex flex-col">
-        <a href={pageLink} target="_blank">
+        <a href={pageLink} target="_blank" rel="noreferrer">
           <h3 className="text-2xl font-bold">{title}</h3>
         </a>
         <h4 className="my-4 text-xl">{desc}</h4>
-        {githubLink ? <a href={githubLink}>깃허브 바로가기</a> : ""}
-        {githubLink ?  <a href={deployLink}>배포 페이지 바로가기</a> : ""}
+        {githubLink ? (
+          <a href={githubLink} target="_blank" rel="noreferrer">
+            깃허브 바로가기
+          </a>
+        ) : (
+          ""
+        )}
+        {deployLink ? (
+          <a href={deployLink} target="_blank" rel="noreferrer">
+            배포 페이지 바로가기
+          </a>
+        ) : (
+          ""
+        )}
         <p className="my-1">
           작업기간 : {start} ~ {end} 총 {calculatedPeriod(start, end)}일
         </p>
         <div className="flex flex-wrap gap-2 items-start mt-2">
           {tags.map((it) => (
-            <p className="px-2 py-1 rounded-md bg-sky-200 dark:bg-sky-700 w-30 text-sm text-slate-900 dark:text-white" key={it.id}>
+            <p
+              className="px-2 py-1 rounded-md bg-sky-200 dark:bg-sky-700 w-30 text-sm text-slate-900 dark:text-white"
+              key={it.id}
+            >
               {it.name}
             </p>
           ))}
