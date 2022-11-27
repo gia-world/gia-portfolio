@@ -1,3 +1,5 @@
+import { GetStaticPropsContext } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import React from "react";
 import Layout from "../components/Layout";
@@ -55,15 +57,15 @@ export interface Result {
       };
     };
   };
-  url:string;
+  url: string;
 }
 const Projects = ({ notionData }: Props) => {
   // console.log(`(클라이언트사이드) ${projectNames}`);
   return (
     <Layout>
       <Head>
-          <title>코딩하지아 - 프로젝트</title>
-        </Head>
+        <title>코딩하지아 - 프로젝트</title>
+      </Head>
       <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-10 px-6">
         <h2 className="text-4xl font-bold">
           총 프로젝트 :
@@ -84,7 +86,7 @@ const Projects = ({ notionData }: Props) => {
 export default Projects;
 
 // getStaticProps 빌드타임에 호출
-export async function getStaticProps() {
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
   const options = {
     method: "POST",
     headers: {
@@ -120,6 +122,9 @@ export async function getStaticProps() {
   // console.log(`(서버사이드)projectNames:${projectNames}`);
 
   return {
-    props: { notionData }, // will be passed to the page component as props
+    props: {
+      notionData, // will be passed to the page component as props
+      ...(await serverSideTranslations(locale as string, ["common", "about"])),
+    },
   };
 }

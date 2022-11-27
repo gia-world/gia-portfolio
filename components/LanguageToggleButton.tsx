@@ -12,7 +12,7 @@ const LanguageToggleButton = () => {
       <Link href="/" locale="ko">
         한국어
       </Link> */}
-      <ul>
+      <ul className="flex gap-1 uppercase">
         {router.locales?.map((locale) => (
           <li key={locale}>
             <Link href={router.asPath} locale={locale}>

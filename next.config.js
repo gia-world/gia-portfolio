@@ -6,7 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["www.notion.so"],
+    domains: ["www.notion.so", "i.ibb.co"],
   },
   i18n,
 };

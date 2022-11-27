@@ -1,4 +1,9 @@
 {
-    "tit":"Hello, this is En",
-    "hi":"hiii"
+  "tit": "Hello, this is En",
+  "hi": "hiii",
+  "header": {
+    "home": "Home",
+    "about": "About Me",
+    "project": "Projects"
+  }
 }

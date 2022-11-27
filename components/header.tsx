@@ -1,9 +1,11 @@
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import React from "react";
 import DarkModeToggleButton from "./DarkModeToggleButton";
 import LanguageToggleButton from "./LanguageToggleButton";
 
 const Header = () => {
+  const { t } = useTranslation("common");
   return (
     <>
       <header className="text-gray-600 body-font md:px-24">
@@ -28,13 +30,13 @@ const Header = () => {
           </Link>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-5 md:gap-8">
             <Link href="/" className="hover:text-gray-900">
-              홈
+              {t("header.home")}
             </Link>
             <Link href="/about-me" className="hover:text-gray-900">
-              소개
+              {t("header.about")}
             </Link>
             <Link href="/projects" className="hover:text-gray-900">
-              프로젝트
+              {t("header.project")}
             </Link>
           </nav>
           <DarkModeToggleButton />
