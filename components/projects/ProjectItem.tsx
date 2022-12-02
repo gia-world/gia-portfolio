@@ -57,15 +57,16 @@ const ProjectItem = ({ data }: Props) => {
           />
         </div>
       </a>
-      <div className="p-4 flex flex-col">
+      <div className="p-4 flex flex-col content-around h-[100%]">
         <a href={pageLink} target="_blank" rel="noreferrer">
           <h3 className="text-2xl font-bold">{title}</h3>
         </a>
-        <h4 className="my-4 text-xl">{desc}</h4>
-        {githubLink ? (
+        <h4 className="my-4 text-xl grow ellipsis">{desc}</h4>
+        <div>
+          {githubLink ? (<>
           <a href={githubLink} target="_blank" rel="noreferrer">
             깃허브 바로가기
-          </a>
+          </a><br/></>
         ) : (
           ""
         )}
@@ -76,10 +77,11 @@ const ProjectItem = ({ data }: Props) => {
         ) : (
           ""
         )}
-        <p className="my-1">
-          작업기간 : {start} ~ {end} 총 {calculatedPeriod(start, end)}일
+        </div>
+        <p className="my-2">
+          작업기간 : 총 {calculatedPeriod(start, end)}일 <small>({start} ~ {end})</small>
         </p>
-        <div className="flex flex-wrap gap-2 items-start mt-2">
+        <div className="flex flex-wrap gap-2 items-start mt-2 basis-16">
           {tags.map((it) => (
             <p
               className="px-2 py-1 rounded-md bg-sky-200 dark:bg-sky-700 w-30 text-sm text-slate-900 dark:text-white"

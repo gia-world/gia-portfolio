@@ -8,7 +8,7 @@ const PageNotFound = () => {
       <div className="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">
         <div className="bg-[url('https://i.ibb.co/G9DC8S0/404-2.png')] bg-no-repeat bg-contain">
           <h1 className="my-2 text-gray-800 font-bold text-2xl">
-            Looks like yo&apos;ve found the doorway to the great nothing
+            Looks like you&apos;ve found the doorway to the great nothing
           </h1>
           <p className="my-2 text-gray-800">
             Sorry about that! Please visit our hompage to get where you need to

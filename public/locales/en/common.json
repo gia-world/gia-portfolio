@@ -1,9 +1,10 @@
 {
-  "tit": "Hello, this is En",
-  "hi": "hiii",
+    "logo":"Codename, Gia",
   "header": {
     "home": "Home",
     "about": "About Me",
-    "project": "Projects"
-  }
+    "project": "Projects",
+    "blog":"Blog"
+  },
+  "cv":"Check out my CV"
 }

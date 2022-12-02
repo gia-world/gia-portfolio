@@ -1,8 +1,10 @@
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import React from "react";
 import Animation from "./Animation";
 
 const MainItem = () => {
+  const { t } = useTranslation("common");
   return (
     <>
       <div className="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:pl-24 items-center text-center">
@@ -14,14 +16,13 @@ const MainItem = () => {
           {/* <Link href="/projects" className="btn-project">
             프로젝트 보러가기
           </Link> */}
-          <a
+          <Link
             href="https://www.notion.so/Gia-Jihye-Jun-the-UI-developer-31cceb5eb0a348258000598f05fc1bd7"
             target="_blank"
-            rel="noreferrer"
             className="btn-project"
           >
-            이력서 확인하기
-          </a>
+            {t('cv')}
+          </Link>
         </div>
       </div>
       <div className="lg:w-full md:w-1/2 w-5/6">

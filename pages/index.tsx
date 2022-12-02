@@ -8,16 +8,16 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const { t } = useTranslation("common");
-  const router = useRouter();
-  const { locale } = router;
+  // const router = useRouter();
+  // const { locale } = router;
 
   return (
     <Layout>
       <Head>
-        <title>코딩하지아</title>
+        <title>{t('logo')}</title>
       </Head>
       <div className="flex min-h-[70vh] md:min-h-[80vh] flex-col items-center justify-center text-gray-600 body-font">
-        <h2>{locale}</h2>
+        {/* <h2>{locale}</h2> */}
         <h2 className="hidden">메인페이지</h2>
         <div className="container mx-auto flex md:flex-row flex-col items-center">
           <MainItem />

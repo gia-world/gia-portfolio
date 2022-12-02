@@ -1,4 +1,5 @@
 import { GetStaticPropsContext } from "next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import React from "react";
@@ -60,15 +61,17 @@ export interface Result {
   url: string;
 }
 const Projects = ({ notionData }: Props) => {
+  
+  const { t } = useTranslation();
   // console.log(`(클라이언트사이드) ${projectNames}`);
   return (
     <Layout>
       <Head>
-        <title>코딩하지아 - 프로젝트</title>
+        <title>{t('common:logo')} - {t('common:header.project')}</title>
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-10 px-6">
         <h2 className="text-4xl font-bold">
-          총 프로젝트 :
+          {t('projects:total')}
           <span className="pl-4 text-blue-500">
             {notionData.results.length}
           </span>
@@ -124,7 +127,7 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
       notionData, // will be passed to the page component as props
-      ...(await serverSideTranslations(locale as string, ["common", "about"])),
+      ...(await serverSideTranslations(locale as string, ["common", "projects"])),
     },
   };
 }

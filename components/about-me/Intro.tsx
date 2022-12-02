@@ -22,7 +22,7 @@ const Intro = () => {
             </div>
             <div className="flex items-center justify-center sm:justify-start gap-2">
               {/* insta */}
-              <a href="#">
+              <a href="https://www.instagram.com/gia_jihye/">
                 <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -33,7 +33,7 @@ const Intro = () => {
                 </svg>
               </a>
               {/* youtube */}
-              <a href="#">
+              <a href="https://www.youtube.com/c/Giagraphy">
                 <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
                   <g fill="none" stroke="currentColor" stroke-linejoin="round">
                     <path
@@ -45,7 +45,7 @@ const Intro = () => {
                 </svg>
               </a>
               {/* blog */}
-              <a href="#">
+              <a href="https://aboveimagine.tistory.com/">
                 <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                   <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                     <path d="M8 21h8a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-1V8a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5z" />
@@ -55,7 +55,7 @@ const Intro = () => {
                 </svg>
               </a>
               {/* github */}
-              <a href="#">
+              <a href="https://github.com/gia-world/">
                 <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1"/></svg>
               </a>
             </div>

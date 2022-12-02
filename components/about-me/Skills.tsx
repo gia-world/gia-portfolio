@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation("about");
   return (
     <section className="container mx-auto px-10 lg:px-20 py-16 md:py-20">
       <h3 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Here's what I'm good at</h3>
@@ -12,8 +14,10 @@ const Skills = () => {
             <img src="https://img.icons8.com/plasticine/100/null/html.png" />
           </div>
           <div className="text-center">
-            <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Mark-up & styling</p>
-            <p className="text-grey pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Mark-up</p>
+            <p className="text-grey pt-4 text-sm md:text-base">
+            {t('markup')}
+            </p>
           </div>
         </li>
         <li className="skill-card">
@@ -21,8 +25,10 @@ const Skills = () => {
             <img src="https://img.icons8.com/plasticine/100/null/media-queries.png" />
           </div>
           <div className="text-center">
-            <p className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">Responsive web</p>
-            <p className="text-grey pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"> Styling & Responsive web</p>
+            <p className="text-grey pt-4 text-sm md:text-base">
+            {t('css')}
+            </p>
           </div>
         </li>
         <li className="skill-card">
@@ -31,7 +37,9 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Co-work</p>
-            <p className="text-grey pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p className="text-grey pt-4 text-sm md:text-base">
+            {t('cowork')}
+            </p>
           </div>
         </li>
         <li className="skill-card">
@@ -40,7 +48,9 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Self-study</p>
-            <p className="text-grey pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p className="text-grey pt-4 text-sm md:text-base">
+            {t('self')}
+            </p>
           </div>
         </li>
         <li className="skill-card">
@@ -51,7 +61,9 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Global experience</p>
-            <p className="text-grey pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p className="text-grey pt-4 text-sm md:text-base">
+            {t('global')}
+            </p>
           </div>
         </li>
         <li className="skill-card">
@@ -60,7 +72,9 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Language</p>
-            <p className="text-grey pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p className="text-grey pt-4 text-sm md:text-base">
+            {t('lang')}
+            </p>
           </div>
         </li>
       </ul>

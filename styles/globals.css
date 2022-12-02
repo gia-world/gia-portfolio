@@ -81,3 +81,11 @@ a {
 p {
   @apply text-slate-500 dark:text-slate-400;
 }
+
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
