@@ -15,7 +15,7 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Mark-up</p>
-            <p className="text-grey pt-4 text-sm md:text-base">
+            <p className="text-grey pt-4 text-sm md:text-base whitespace-pre-line">
             {t('markup')}
             </p>
           </div>
@@ -26,8 +26,9 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"> Styling & Responsive web</p>
-            <p className="text-grey pt-4 text-sm md:text-base">
+            <p className="text-grey pt-4 text-sm md:text-base whitespace-pre-line">
             {t('css')}
+            {/* t('test:test.line').split('/n').map(line => <p>{line}</p>) */}
             </p>
           </div>
         </li>
@@ -37,7 +38,7 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Co-work</p>
-            <p className="text-grey pt-4 text-sm md:text-base">
+            <p className="text-grey pt-4 text-sm md:text-base whitespace-pre-line">
             {t('cowork')}
             </p>
           </div>
@@ -48,7 +49,7 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Self-study</p>
-            <p className="text-grey pt-4 text-sm md:text-base">
+            <p className="text-grey pt-4 text-sm md:text-base whitespace-pre-line">
             {t('self')}
             </p>
           </div>
@@ -61,7 +62,7 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Global experience</p>
-            <p className="text-grey pt-4 text-sm md:text-base">
+            <p className="text-grey pt-4 text-sm md:text-base whitespace-pre-line">
             {t('global')}
             </p>
           </div>
@@ -72,7 +73,7 @@ const Skills = () => {
           </div>
           <div className="text-center">
             <p className="pt-8 text-lg font-semibold uppercase text-primary lg:text-xl">Language</p>
-            <p className="text-grey pt-4 text-sm md:text-base">
+            <p className="text-grey pt-4 text-sm md:text-base whitespace-pre-line">
             {t('lang')}
             </p>
           </div>

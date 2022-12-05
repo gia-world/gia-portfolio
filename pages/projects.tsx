@@ -67,7 +67,7 @@ const Projects = ({ notionData }: Props) => {
   return (
     <Layout>
       <Head>
-        <title>{t('common:logo')} - {t('common:header.project')}</title>
+        <title>{`${t('common:logo')} - ${t('common:header.project')}`}</title>
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-10 px-6">
         <h2 className="text-4xl font-bold">

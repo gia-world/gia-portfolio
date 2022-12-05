@@ -12,7 +12,7 @@ export default function AboutMe() {
   return (
     <Layout>
       <Head>
-        <title>{t('logo')} - {t('header.about')}</title>
+        <title>{`${t('logo')} - ${t('header.about')}`}</title>
       </Head>
       <div>
         <h2 className="hidden">자기소개</h2>
