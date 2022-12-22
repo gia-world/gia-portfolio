@@ -1,0 +1,10 @@
+{
+    "logo":"Codename, Gia",
+  "header": {
+    "home": "Home",
+    "about": "About Me",
+    "project": "Projects",
+    "blog":"Blog"
+  },
+  "cv":"Check out my CV"
+}

@@ -1,0 +1,11 @@
+{
+  "logo":"Codename, Gia",
+  "header": {
+    "home": "首页",
+    "about": "介绍",
+    "project": "项目",
+    "blog":"博客"
+  },
+  "fedev": "前端工程师",
+  "cv":"查看简历"
+}
