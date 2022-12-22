@@ -5,7 +5,7 @@ const Skills = () => {
   const { t } = useTranslation("about");
   return (
     <section className="container mx-auto px-10 lg:px-20 py-16 md:py-20">
-      <h3 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Here's what I'm good at</h3>
+      <h3 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Here&apos;s what I&apos;m good at</h3>
       <p className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">These are my speciality than others</p>
 
       <ul className="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">

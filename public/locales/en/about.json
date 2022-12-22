@@ -1,8 +1,8 @@
 {
-    "markup":"웹 표준과 시멘틱 마크업<br/>검색엔진최적화(SEO)",
-    "css":"다년간의 퍼블리셔 경험<br/>CSS 전처리기 활용 가능",
-    "cowork":"다양한 팀 경험<br/>(리더와 팔로워 둘 다 가능한 멀티플레이어)",
-    "self":"뛰어난 검색 능력<br/>프론트 공부도 독학으로!",
-    "global":"중국, 중동 거주<br/>약 50개국 여행 경험",
-    "lang":"Native : KR<br/>Fluent : EN, CH<br/>Intermediate : ES"
+  "markup": "complies with sementic mark-up \nW3C Recommendations & SEO",
+  "css": "years experience of web publishing \n able to use CSS compiler as SCSS ",
+  "cowork": "various team experience \n as both leader and follower",
+  "self": "amazing searching skill \n good at self-study",
+  "global": "has lived in Middle-east and China\n traveled over 50 countries",
+  "lang": "Native : KR\nFluent : EN, CH\nIntermediate : ES"
 }
