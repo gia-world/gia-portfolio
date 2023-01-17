@@ -89,7 +89,7 @@ const Projects = ({ notionData }: Props) => {
 export default Projects;
 
 // getStaticProps 빌드타임에 호출
-export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
   const options = {
     method: "POST",
     headers: {
@@ -117,12 +117,6 @@ export async function getServerSideProps({ locale }: GetServerSidePropsContext) 
   const notionData = await res.json();
 
   // console.log(notionData);
-
-  // const projectNames = notionData.results.map(
-  //   (it: Result) => it.properties.Name.title[0].plain_text
-  // );
-
-  // console.log(`(서버사이드)projectNames:${projectNames}`);
 
   return {
     props: {
