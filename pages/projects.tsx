@@ -1,4 +1,4 @@
-import { GetStaticPropsContext } from "next";
+import { GetServerSidePropsContext, GetStaticPropsContext } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
@@ -89,7 +89,7 @@ const Projects = ({ notionData }: Props) => {
 export default Projects;
 
 // getStaticProps 빌드타임에 호출
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
   const options = {
     method: "POST",
     headers: {
@@ -101,8 +101,8 @@ export async function getStaticProps({ locale }: GetStaticPropsContext) {
     body: JSON.stringify({
       sorts: [
         {
-          property: "Name",
-          direction: "ascending",
+          "timestamp": "created_time",
+          direction: "descending",
         },
       ],
       page_size: 100,
