@@ -3,7 +3,8 @@
 
 ## Description
 used **Notion API** as a DB of toy projets<br>
-internationalization as Korea, English, Chineses with **i18n**
+internationalization as Korea, English, Chineses with **i18n**   
+built dark mode with **next-themes**
 
 ## Stats
 React.js / Next.js / TypeScript / tailwinds
