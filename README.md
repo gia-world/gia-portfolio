@@ -7,3 +7,6 @@ internationalization as Korea, English, Chineses with **i18n**
 
 ## Stats
 React.js / Next.js / TypeScript / tailwinds
+
+## Deployed Link
+https://gia-portfolio.vercel.app/
