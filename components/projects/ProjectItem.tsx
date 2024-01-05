@@ -1,5 +1,3 @@
-import Image from "next/image";
-import React from "react";
 import { Result } from "../../pages/projects";
 
 interface Props {
@@ -10,7 +8,7 @@ const ProjectItem = ({ data }: Props) => {
   const title = data.properties.Name.title[0].plain_text;
   const githubLink = data.properties.Github.url;
   const deployLink = data.properties.Deployment.url;
-  const desc = data.properties.Description.rich_text[0].plain_text;
+  const desc = data.properties.Description.rich_text[0]?.plain_text || null;
   // const imgSrc = data.cover.file&&data.cover.file?.url || data.cover.external.url;
   const tags = data.properties.Tags.multi_select;
   const start = data.properties.WorkPeriod.date.start;
@@ -22,8 +20,16 @@ const ProjectItem = ({ data }: Props) => {
       const startDateStringArray = start.split("-");
       const endDateStringArray = end.split("-");
 
-      var startDate = new Date(Number(startDateStringArray[0]), Number(startDateStringArray[1]), Number(startDateStringArray[2]));
-      var endDate = new Date(Number(endDateStringArray[0]), Number(endDateStringArray[1]), Number(endDateStringArray[2]));
+      var startDate = new Date(
+        Number(startDateStringArray[0]),
+        Number(startDateStringArray[1]),
+        Number(startDateStringArray[2])
+      );
+      var endDate = new Date(
+        Number(endDateStringArray[0]),
+        Number(endDateStringArray[1]),
+        Number(endDateStringArray[2])
+      );
 
       const diffInMs = Math.abs(Number(endDate) - Number(startDate));
       const result = diffInMs / (1000 * 60 * 60 * 24);
@@ -72,16 +78,26 @@ const ProjectItem = ({ data }: Props) => {
           )}
         </div>
         <p className="my-2">
-         작업기간 : 
-         {end ? 
-         <span>총 {calculatedPeriod(start, end)}일{" "} <small>({start} ~ {end})</small></span>
-         : 
-         <span>작업중 <small>({start} ~ )</small></span>
-         }
+          작업기간{` : `}
+          {end ? (
+            <span>
+              총 {calculatedPeriod(start, end)}일{" "}
+              <small>
+                ({start} ~ {end})
+              </small>
+            </span>
+          ) : (
+            <span>
+              작업중 <small>({start} ~ )</small>
+            </span>
+          )}
         </p>
         <div className="flex flex-wrap gap-2 items-start mt-2 basis-16">
           {tags.map((it) => (
-            <p className="px-2 py-1 rounded-md bg-sky-200 dark:bg-sky-700 w-30 text-sm text-slate-900 dark:text-white" key={it.id}>
+            <p
+              className="px-2 py-1 rounded-md bg-sky-200 dark:bg-sky-700 w-30 text-sm text-slate-900 dark:text-white"
+              key={it.id}
+            >
               {it.name}
             </p>
           ))}

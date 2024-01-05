@@ -83,18 +83,23 @@ const Projects = () => {
         <title>{`${t("common:logo")} - ${t("common:header.project")}`}</title>
       </Head>
       <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-10 px-6">
-        <h2 className="text-4xl font-bold">
-          {t("projects:total")}
-          <span className="pl-4 text-blue-500">
-            {notionData && notionData.results?.length}
-          </span>
-        </h2>
-        <div className="container mx-auto grid md:grid-cols-2 xl:grid-cols-3 py-10 lg:px-40 gap-8 w-full">
-          {notionData &&
-            notionData.results?.map((it: any) => (
-              <ProjectItem key={it.id} data={it} />
-            ))}
-        </div>
+        {notionData ? (
+          <>
+            <h2 className="text-4xl font-bold">
+              {t("projects:total")}
+              <span className="pl-4 text-blue-500">
+                {notionData.results?.length}
+              </span>
+            </h2>
+            <div className="container mx-auto grid md:grid-cols-2 xl:grid-cols-3 py-10 lg:px-40 gap-8 w-full">
+              {notionData.results?.map((it: any) => (
+                <ProjectItem key={it.id} data={it} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <h2 className="text-2xl">데이터를 준비중입니다.</h2>
+        )}
       </div>
     </Layout>
   );
