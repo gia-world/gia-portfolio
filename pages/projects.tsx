@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import { GetStaticPropsContext } from "next/types";
 import { useEffect, useState } from "react";
+import { BeatLoader } from "react-spinners";
 import Layout from "../components/Layout";
 import ProjectItem from "../components/projects/ProjectItem";
 
@@ -72,7 +73,7 @@ const Projects = () => {
       }
     };
 
-    fetchNotionData();
+    // fetchNotionData();
   }, []);
 
   // console.log(notionData, "state notion");
@@ -82,7 +83,7 @@ const Projects = () => {
       <Head>
         <title>{`${t("common:logo")} - ${t("common:header.project")}`}</title>
       </Head>
-      <div className="flex flex-col items-center justify-center min-h-screen my-4 md:my-10 px-6">
+      <div className="flex flex-col items-center justify-center min-h-[600px] my-4 md:my-10 px-6">
         {notionData ? (
           <>
             <h2 className="text-4xl font-bold">
@@ -98,7 +99,7 @@ const Projects = () => {
             </div>
           </>
         ) : (
-          <h2 className="text-2xl">데이터를 준비중입니다.</h2>
+          <BeatLoader color="#6366F1" />
         )}
       </div>
     </Layout>
