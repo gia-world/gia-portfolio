@@ -1,18 +1,31 @@
-import React from "react";
-
 const Intro = () => {
   return (
     <section className="w-full bg-violet-50 dark:bg-slate-600">
       <div className="container flex flex-col items-center justify-center px-10 py-16 md:py-20 lg:flex-row bg-grey-50 mx-auto">
         <div className="w-full text-center sm:w-3/4 lg:w-2/5 lg:text-left">
-          <h3 className="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">Who am I?</h3>
-          <h4 className="pt-2 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">I`&apos;m Jihye Jun, A.K.A. Gia.</h4>
-          <p className="pt-6 font-body leading-relaxed text-grey-20">a Front-end Developer</p>
+          <h3 className="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+            Who am I?
+          </h3>
+          <h4 className="pt-2 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+            I&apos;m Jihye Jun, A.K.A. Gia.
+          </h4>
+          <p className="pt-6 font-body leading-relaxed text-grey-20">
+            a Front-end Developer
+          </p>
           <div className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start gap-4">
             <div className="flex items-center justify-center sm:justify-start gap-2">
-              <p className="font-body text-lg font-semibold uppercase text-grey-20">Connect with me</p>
+              <p className="font-body text-lg font-semibold uppercase text-grey-20">
+                Connect with me
+              </p>
               <div className="hidden sm:block">
-                <svg className="text-violet-400" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <svg
+                  className="text-violet-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="currentColor"
                     d="M7.15 21.1q-.375-.375-.375-.888q0-.512.375-.887L14.475 12l-7.35-7.35q-.35-.35-.35-.875t.375-.9q.375-.375.888-.375q.512 0 .887.375l8.4 8.425q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325L8.9 21.125q-.35.35-.862.35q-.513 0-.888-.375Z"
@@ -23,7 +36,14 @@ const Intro = () => {
             <div className="flex items-center justify-center sm:justify-start gap-2">
               {/* insta */}
               <a href="https://www.instagram.com/gia_jihye/">
-                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <svg
+                  className="text-violet-900 dark:text-violet-200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.8rem"
+                  height="1.8rem"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="currentColor"
                     fill-rule="evenodd"
@@ -34,20 +54,43 @@ const Intro = () => {
               </a>
               {/* youtube */}
               <a href="https://www.youtube.com/c/Giagraphy">
-                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                <svg
+                  className="text-violet-900 dark:text-violet-200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.8rem"
+                  height="1.8rem"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 48 48"
+                >
                   <g fill="none" stroke="currentColor" stroke-linejoin="round">
                     <path
                       stroke-width="4"
                       d="M11.064 10.414c5.543-.276 9.854-.414 12.934-.414s7.393.138 12.939.415a6 6 0 0 1 5.68 5.492c.254 3.034.381 5.706.381 8.017c0 2.339-.13 5.048-.39 8.128a6 6 0 0 1-5.587 5.483c-4.741.31-9.082.465-13.023.465c-3.94 0-8.28-.155-13.018-.465a6 6 0 0 1-5.587-5.48c-.263-3.103-.395-5.814-.395-8.131c0-2.29.129-4.963.385-8.02a6 6 0 0 1 5.68-5.49Z"
                     />
-                    <path stroke-width="3.429" d="M21 19.61v8.796a.857.857 0 0 0 1.33.715l6.597-4.36a.857.857 0 0 0 .006-1.427l-6.598-4.436a.857.857 0 0 0-1.335.711Z" />
+                    <path
+                      stroke-width="3.429"
+                      d="M21 19.61v8.796a.857.857 0 0 0 1.33.715l6.597-4.36a.857.857 0 0 0 .006-1.427l-6.598-4.436a.857.857 0 0 0-1.335.711Z"
+                    />
                   </g>
                 </svg>
               </a>
               {/* blog */}
               <a href="https://aboveimagine.tistory.com/">
-                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <svg
+                  className="text-violet-900 dark:text-violet-200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.8rem"
+                  height="1.8rem"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
                     <path d="M8 21h8a5 5 0 0 0 5-5v-3a3 3 0 0 0-3-3h-1V8a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5z" />
                     <rect width="6" height="3" x="7" y="7" rx="1.5" />
                     <rect width="10" height="3" x="7" y="14" rx="1.5" />
@@ -56,7 +99,23 @@ const Intro = () => {
               </a>
               {/* github */}
               <a href="https://github.com/gia-world/">
-                <svg className="text-violet-900 dark:text-violet-200" xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1"/></svg>
+                <svg
+                  className="text-violet-900 dark:text-violet-200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1.8rem"
+                  height="1.8rem"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M5.75 14.25s-.5-2 .5-3c0 0-2 0-3.5-1.5s-1-4.5 0-5.5c-.5-1.5.5-2.5.5-2.5s1.5 0 2.5 1c1-.5 3.5-.5 4.5 0c1-1 2.5-1 2.5-1s1 1 .5 2.5c1 1 1.5 4 0 5.5s-3.5 1.5-3.5 1.5c1 1 .5 3 .5 3m-5-.5c-1.5.5-3-.5-3.5-1"
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -64,47 +123,72 @@ const Intro = () => {
         <ul className="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
           <li>
             <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">HTML</h4>
+              <h4 className="font-body font-semibold uppercase text-black">
+                HTML
+              </h4>
               <h3 className="font-body text-3xl font-bold text-primary">95%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={{ width: "95%" }}></div>
+              <div
+                className="h-3 rounded-full bg-primary"
+                style={{ width: "95%" }}
+              ></div>
             </div>
           </li>
           <li className="mt-6">
             <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">SCSS</h4>
+              <h4 className="font-body font-semibold uppercase text-black">
+                SCSS
+              </h4>
               <h3 className="font-body text-3xl font-bold text-primary">95%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={{ width: "95%" }}></div>
+              <div
+                className="h-3 rounded-full bg-primary"
+                style={{ width: "95%" }}
+              ></div>
             </div>
           </li>
           <li className="mt-6">
             <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">React.js</h4>
+              <h4 className="font-body font-semibold uppercase text-black">
+                React.js
+              </h4>
               <h3 className="font-body text-3xl font-bold text-primary">80%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={{ width: "80%" }}></div>
+              <div
+                className="h-3 rounded-full bg-primary"
+                style={{ width: "80%" }}
+              ></div>
             </div>
           </li>
           <li className="mt-6">
             <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">Typescript</h4>
+              <h4 className="font-body font-semibold uppercase text-black">
+                Typescript
+              </h4>
               <h3 className="font-body text-3xl font-bold text-primary">80%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={{ width: "80%" }}></div>
+              <div
+                className="h-3 rounded-full bg-primary"
+                style={{ width: "80%" }}
+              ></div>
             </div>
           </li>
           <li className="mt-6">
             <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">Next.js</h4>
+              <h4 className="font-body font-semibold uppercase text-black">
+                Next.js
+              </h4>
               <h3 className="font-body text-3xl font-bold text-primary">70%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={{ width: "70%" }}></div>
+              <div
+                className="h-3 rounded-full bg-primary"
+                style={{ width: "70%" }}
+              ></div>
             </div>
           </li>
         </ul>
