@@ -1,11 +1,10 @@
-import { GetServerSidePropsContext } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
+import { GetStaticPropsContext } from "next/types";
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import ProjectItem from "../components/projects/ProjectItem";
-import { DATABASE_ID, TOKEN } from "../config";
 
 interface NotionData {
   results: Result[];
@@ -103,42 +102,8 @@ const Projects = () => {
 
 export default Projects;
 
-export async function getServerSideProps({
-  locale,
-}: GetServerSidePropsContext) {
-  const options = {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-      "Notion-Version": "2022-02-22",
-      "content-type": "application/json",
-      Authorization: `Bearer ${TOKEN}`,
-    },
-    body: JSON.stringify({
-      sorts: [
-        {
-          timestamp: "created_time",
-          direction: "descending",
-        },
-      ],
-      page_size: 100,
-    }),
-  };
-
-  const res = await fetch(
-    `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
-    options
-  );
-
-  const notionData = await res.json();
-
-  return {
-    props: {
-      notionData,
-      ...(await serverSideTranslations(locale as string, [
-        "common",
-        "projects",
-      ])),
-    },
-  };
-}
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
+  props: {
+    ...(await serverSideTranslations(locale as string, ["common", "projects"])),
+  },
+});
