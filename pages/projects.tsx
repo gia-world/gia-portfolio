@@ -75,7 +75,7 @@ const Projects = () => {
     fetchNotionData();
   }, []);
 
-  console.log(notionData, "state notion");
+  // console.log(notionData, "state notion");
 
   return (
     <Layout>
