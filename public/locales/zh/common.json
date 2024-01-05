@@ -1,11 +1,18 @@
 {
-  "logo":"Codename, Gia",
+  "logo": "Codename, Gia",
   "header": {
     "home": "首页",
     "about": "介绍",
     "project": "项目",
-    "blog":"博客"
+    "blog": "博客"
   },
   "fedev": "前端工程师",
-  "cv":"查看简历"
+  "cv": "查看简历",
+  "profile": {
+    "subtit": "前空乘员，前Publisher，现在Frontend developer",
+    "li1": "我从不停歇，始终向前努力。",
+    "li2": "我使用 React.js，Next.js 和 TypeScript 进行开发。",
+    "li3": "我重视网络标准，语义化标记和 SEO，\n并擅长 CSS。",
+    "li4": "我始终渴望成长和改进。"
+  }
 }

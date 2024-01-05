@@ -84,7 +84,7 @@ const Projects = () => {
       <div className="flex flex-col items-center justify-center min-h-[600px] my-4 md:my-10 px-6">
         {notionData ? (
           <>
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold text-center">
               {t("projects:total")}
               <span className="pl-4 text-blue-500">
                 {notionData.results?.length}
