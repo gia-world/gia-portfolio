@@ -18,7 +18,7 @@ const MainItem = () => {
           Gia Jihye Jun
         </h2>
         <h3 className="text-xl">✨ {t("profile.subtit")}</h3>
-        <ul className="list-disc ml-4 whitespace-pre">
+        <ul className="list-disc ml-4 break-keep">
           <li className=" text-slate-500 dark:text-slate-400">
             {t("profile.li1")}
           </li>

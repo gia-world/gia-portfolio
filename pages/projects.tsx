@@ -106,6 +106,10 @@ const Projects = () => {
 
 export default Projects;
 
+/*
+ getStaticProps: 빌드 시 한 번 데이터를 불러오고 페이지들에 재사용 (SSG)
+ getServerSideProps: 매 요청 시마다 새로운 데이터를 불러와 사용자에게 동적으로 페이지를 보여줌 (SSR)
+*/
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
   props: {
     ...(await serverSideTranslations(locale as string, ["common", "projects"])),
